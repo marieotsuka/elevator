@@ -1,0 +1,81 @@
+@font-face {
+  font-family: 'DS-Digital';
+    src:  url('fonts/DS-Digital.ttf.woff') format('woff'),
+    url('fonts/DS-Digital.ttf.svg#DS-Digital') format('svg'),
+    url('fonts/DS-Digital.ttf.eot'),
+    url('fonts/DS-Digital.eot?#iefix') format('embedded-opentype'); 
+    font-weight: normal;
+    font-style: normal;
+}
+
+body{
+  height: 12000vh;
+  width: 100vw;
+  margin: 0;
+  overflow-x: hidden;
+  cursor: none !important;
+}
+
+body::-webkit-scrollbar {
+    width: 2em;
+}
+ 
+body::-webkit-scrollbar-track {
+    background: #332f22;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.8);
+}
+ 
+body::-webkit-scrollbar-thumb {
+  background-color: #e4d6ad;
+  -webkit-box-shadow: 0 0 6px rgba(0,0,0,0.8);
+}
+
+#bg {position: fixed; top: 0; left: 0; width: 100%; height: 100%;}
+#bg img {display: block; width: 100%; height: 100%;}
+
+#digits {
+  font-family: 'DS-Digital', monospace;  
+  color: #E01214;
+  text-shadow: 2px 0px 8px #ff0000;
+  text-align: right;
+  padding-right: 5%;
+  position: fixed;
+  top: 22%;
+  left: 29%;
+  width: 41%;
+  box-sizing: border-box;
+}
+
+#arrow{
+	text-align: left;
+	width: 20%;
+	padding-left: 20%;
+	animation: 1s blink linear infinite;
+}
+
+#arrow.down{
+  transform: scale(1,-1);
+}
+
+.hide{
+  visibility: hidden;
+}
+#digits div{
+	display: table-cell;
+	vertical-align: top;
+	font-size: 30vh;
+}
+
+/*#container{
+  position: absolute;
+  min-height: 
+  width: 100vw;
+}*/
+
+.space{
+  height: 100vh;
+}
+@keyframes blink{
+	0% { opacity: 0.0; }
+    100% { opacity: 1.0; }
+}
